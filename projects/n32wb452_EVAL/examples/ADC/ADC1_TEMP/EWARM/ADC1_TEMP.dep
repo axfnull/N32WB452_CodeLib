@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2070921876</fileChecksum>
+  <configuration>
+    <name>N32WB452</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_crc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_can.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_adc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dac.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\n32wb452_conf.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32wb452.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\mpu_armv7.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_iccarm.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_version.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_compiler.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\n32wb452.h</file>
+      <file>$PROJ_DIR$\..\inc\main.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32wb452.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_adc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_bkp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_can.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_crc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dac.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dbg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dma.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dvp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_exti.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_i2c.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_flash.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_gpio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_iwdg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_pwr.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rcc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rtc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_spi.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_tim.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_it.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_usart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_wwdg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_n32wb452_EWARM.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32wb452.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_adc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_bkp.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_can.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_crc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dac.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dbg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dma.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dvp.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_exti.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_i2c.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_flash.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_gpio.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_iwdg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_pwr.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rcc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rtc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_spi.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_tim.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_it.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_usart.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_wwdg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Exe\template_project.out</file>
+      <file>$PROJ_DIR$\Debug\Exe\ADC1_TEMP.bin</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\Debug\List\template_project.map</file>
+      <file>$TOOLKIT_DIR$\config\linker\Nations\N32WB452\N32WB452xE.icf</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+      <file>$PROJ_DIR$\..\inc\n32wb452_it.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_bkp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32wb452.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_adc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_bkp.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_can.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_crc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dac.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dbg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dma.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dvp.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_exti.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_flash.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_i2c.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_iwdg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_pwr.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_rcc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_rtc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_spi.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_tim.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_usart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_wwdg.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\startup\startup_n32wb452_EWARM.s</file>
+      <file>$PROJ_DIR$\..\src\main.c</file>
+      <file>$PROJ_DIR$\..\src\n32wb452_it.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\misc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_tim.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_rtc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_wwdg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_usart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_tsc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_rcc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_pwr.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_iwdg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_i2c.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_flash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_exti.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dvp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dma.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dbg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ADC1_TEMP.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_it.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_wwdg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_usart.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_tim.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_spi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rtc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rcc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_pwr.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_iwdg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_i2c.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_gpio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_flash.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_exti.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dvp.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dma.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dbg.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dac.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_bkp.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_crc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_can.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32wb452.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_adc.pbi</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 75 80</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\template_project.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 76</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 81 50 26 28 29 30 31 32 33 34 35 36 38 39 37 46 40 41 42 43 44 45 47 48 51 27 79 77 78 82</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32wb452.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 150</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 24 15 14 10 125 21 117 5 1 122 115 7 23 20 9 2 3 123 119 113 116 4 11 12 8 22 19 17 84 0 126 124 121 120 118 112 111 114 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 142</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 49</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 110 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 15 84 12 111 22 121 7 17 23 10 126 118 110 14 4 11 8 24 19 0 124 120 112 114 21 20 9 6 2 1 3 125 123 122 119 117 113 115 116</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_adc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 151</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 53</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 2 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15 122 10 1 115 14 21 6 24 125 117 5 7 23 20 9 2 3 123 119 113 116 4 11 12 8 22 19 17 84 0 126 124 121 120 118 112 111 114 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_bkp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 147</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 54</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 118 15 14 17 23 10 126 110 5 12 22 84 121 111 7 4 11 8 24 19 0 124 120 112 114 21 20 9 6 2 1 3 125 123 122 119 117 113 115 116</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_can.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 149</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_crc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 148</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 56</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 0 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15 123 14 20 2 113 5 10 23 24 9 3 119 116 7 21 6 1 125 122 117 115 0 4 11 12 8 22 19 17 84 126 124 121 120 118 112 111 114 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dac.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 146</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 57</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 3 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24 5 119 15 23 9 3 116 7 20 2 123 113 117 14 10 21 6 1 125 122 115 4 11 12 8 22 19 17 84 0 126 124 121 120 118 112 111 114 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dbg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 145</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 58</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 126 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 119 14 24 15 23 9 3 116 5 10 20 2 123 113 7 21 6 1 125 122 117 115 126 4 11 12 8 22 19 17 84 0 124 121 120 118 112 111 114 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dma.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 144</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 125 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 113 15 10 2 123 5 14 23 24 9 3 119 116 117 7 21 6 1 125 122 115 4 11 12 8 22 19 17 84 0 126 124 121 120 118 112 111 114 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dvp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 143</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 60</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 124 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 22 14 15 121 12 84 111 10 17 23 126 118 110 117 7 4 11 8 24 19 0 124 120 112 114 21 20 9 6 2 1 3 125 123 122 119 113 115 116</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_exti.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 36</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 141</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 123 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 140</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 121 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 139</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 122 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_i2c.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 138</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 62</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 120 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_iwdg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 137</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 119 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_pwr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 136</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 118 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_rcc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 135</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 117 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_rtc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 134</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 68</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 112 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_spi.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 133</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 113 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_tim.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 132</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 70</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 111 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_usart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 131</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 115 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_wwdg.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 129</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 114 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\startup\startup_n32wb452_EWARM.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 50</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 130</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 74</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25 24 23 22 21 20 19 17 18 13 16 15 14 10 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\n32wb452_it.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 128</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 71</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 83 15 14 10 24 23 22 21 20 19 17 11 12 9 6 8 7 5 4 2 84 1 0 3 126 125 124 123 121 122 120 119 118 117 112 113 111 115 114 116 110 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

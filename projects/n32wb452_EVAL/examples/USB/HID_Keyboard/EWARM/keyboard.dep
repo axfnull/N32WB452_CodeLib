@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1099618450</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32wb452.o</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32wb452.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dma.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_exti.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_flash.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_rcc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_usart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_core.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_init.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_int.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_mem.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_regs.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_sil.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\startup\startup_n32wb452_EWARM.s</file>
+      <file>$PROJ_DIR$\..\src\hw_config.c</file>
+      <file>$PROJ_DIR$\..\src\main.c</file>
+      <file>$PROJ_DIR$\..\src\n32wb452_it.c</file>
+      <file>$PROJ_DIR$\..\src\usb_desc.c</file>
+      <file>$PROJ_DIR$\..\src\usb_endp.c</file>
+      <file>$PROJ_DIR$\..\src\usb_istr.c</file>
+      <file>$PROJ_DIR$\..\src\usb_prop.c</file>
+      <file>$PROJ_DIR$\..\src\usb_pwr.c</file>
+      <file>$PROJ_DIR$\..\inc\usb_pwr.h</file>
+      <file>$PROJ_DIR$\..\inc\usb_desc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_int.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_mem.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_sil.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_init.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_core.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_def.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_regs.h</file>
+      <file>$PROJ_DIR$\..\inc\usb_conf.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_lib.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\inc\usb_type.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\misc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_tsc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_usart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_wwdg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_tim.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_rtc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_rcc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_pwr.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_iwdg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_i2c.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_flash.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_exti.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dvp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dma.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dbg.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_dac.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_crc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_can.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_bkp.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\inc\n32wb452_adc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\n32wb452_conf.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32wb452.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\mpu_armv7.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_iccarm.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_compiler.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\cmsis_version.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\core\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\inc\hw_config.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\n32wb452.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dma.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_exti.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rcc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_flash.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_gpio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_init.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_usart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_core.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_int.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_mem.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_regs.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_sil.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\hw_config.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_it.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_desc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_endp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_istr.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_prop.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_pwr.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\misc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_n32wb452_EWARM.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_n32wb452.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_dma.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_exti.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_rcc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_flash.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_gpio.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_init.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_usart.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_core.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_int.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_mem.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_regs.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_sil.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\hw_config.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\n32wb452_it.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_desc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_endp.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_istr.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_prop.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb_pwr.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Exe\keyboard.out</file>
+      <file>$PROJ_DIR$\Debug\Exe\keyboard.bin</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\config\linker\Nations\N32WB452\N32WB452xE.icf</file>
+      <file>$PROJ_DIR$\..\inc\usb_istr.h</file>
+      <file>$PROJ_DIR$\..\inc\n32wb452_it.h</file>
+      <file>$PROJ_DIR$\..\inc\main.h</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+      <file>$PROJ_DIR$\..\inc\usb_prop.h</file>
+      <file>$PROJ_DIR$\Debug\List\keyboard.map</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 121 131</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\system_n32wb452.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 100</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 98</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 36 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_dma.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 101</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_exti.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 102</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 47 48 46 45 44 43 42 41 40 38 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_flash.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 104</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 47 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 46 45 44 43 42 41 40 38 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 82</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 105</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 48 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 46 45 44 43 42 41 40 38 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_rcc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 103</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 43 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 42 41 40 38 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_std_periph_driver\src\n32wb452_usart.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 107</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 38 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 39 37 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_core.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 108</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_init.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 83</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 106</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_int.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 109</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_mem.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 110</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_regs.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 88</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 111</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\n32wb452_usbfs_driver\src\usb_sil.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 112</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\..\firmware\CMSIS\device\startup\startup_n32wb452_EWARM.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\hw_config.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 91</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 114</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 35 33 34 32 31 30 29 28 27 26 25 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 90</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 113</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 75 35 33 34 32 31 30 29 28 27 26 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\n32wb452_it.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 115</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 127 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 128 126 33</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\usb_desc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 116</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\usb_endp.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 94</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 117</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 35 33 34 32 31 30 29 28 27 26 126</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\usb_istr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 118</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26 130 24 126</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\usb_prop.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 119</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 35 33 34 32 31 30 29 28 27 26 130 25 24</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\src\usb_pwr.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34 35 33 59 32 76 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 50 49 47 48 46 45 44 43 42 41 40 38 39 37 36 31 30 29 28 27 26 24 75</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\keyboard.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 131</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 122</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 125 91 90 77 78 79 81 82 92 80 84 99 0 85 93 94 83 86 95 87 96 97 88 89 124 123 129 132</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+</project>
+
+

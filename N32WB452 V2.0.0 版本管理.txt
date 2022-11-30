@@ -1,0 +1,151 @@
+﻿Nationstech.N32WB452_Library.2.0.0版本：
+版本变更 1.3.0->2.0.0
+1.USART模块
+	USART初始化函数,波特率设置优化
+	
+Nationstech.N32WB452_Library.1.3.0版本：
+1、I2C模块
+	读单字节数据是判断标志修改
+	初始化函数，时钟判断修改
+2、log.c
+	修改fputc函数发送完成判断标志
+Nationstech.N32WB452_Library.1.2.0版本：
+1、 公共文件n32wb452.h修正了几个宏定义：
+        RCC_CFG_USBPRES_PLLDIV3、RCC_CFG_USBPRES_PLLDIV2、RCC_APB1ENR_OPAMPEN、
+        RCC_CSR_MMURSTF、FLASH_AC_LATENCY
+2、 公共文件log.c、log.h：
+        修改调试UART端口为PA9/PA10
+3、 SPI模块：
+        新增 SPI_RECORDER 例程
+        新增 SPI_FLASH_DMA 例程
+4、 USB模块：
+        新增 Audio_Speaker 例程
+        新增 HID_Keyboard_TwoWay 例程
+        新增 Printer 例程
+        修改USB例程挂起后进入低功耗模式
+5、 RCC模块，驱动n32wb452_rcc.c/h中：
+        更新RC_HSE_DISABLE宏定义名称
+        更新RCC_ADC1MCLK_SRC_HSE宏定义的值
+6、 FLASH模块，驱动n32wb452_flash/h中：
+        更新FLASH_SetSMPSELStatus函数定义
+        更新FLASH_GetSMPSELStatus函数定义
+        删除RCC_ConfigEthClk相关定义
+7、 ADC模块，驱动n32wb452_adc.c/h中：
+        修改了ADC_SetDifChsEnable函数名称；
+        修改了ADC 模式寄存器位定义名称；
+        增加对校准功能的函数重入性控制
+8、 TSC模块：
+        驱动n32wb452_tsc.c/h优化，兼容触控算法库V1.0.4,
+        增加算法库使用例程
+9、 RTC模块：
+        优化RTC TimeStamp例程
+		例程优化
+10、SDIO模块，优化例程uSDCard：
+        增加中断回调函数
+        添加宏开关，切换单块读写和多块读写
+11、USART模块：
+        IrDA_Tx&Rx DEMO Receive测例和Transmit测例合并成Transmit_Receive测例
+        IrDA_Tx&Rx DEMO 新增LP_Transmit_Receive测例
+12、I2C模块：
+        优化驱动n32wb452_i2c.c/h，修改I2C初始化函数
+        优化所有DEMO，修改端口配置及应用流程
+13、TIM模块：
+        修改TIM_EnableOc1Preload函数为TIM_ConfigOc1Preload
+        增加TIM_GetAutoReload、TIM_GetCCENStatus函数
+14、DVP模块：
+        完善针对C++的文件头宏定义  #ifdef __cplusplus } #endif
+15、BLE模块：
+        更新驱动库文件（KEIL:16bit/32bit,IAR:16bit）
+        优化slave、devBoardDemo例程便于演示
+16、所有模块增加IAR工程示例
+17、新增RT-Thread系统例程
+18、WWDG模块
+		例程优化
+19、RTC模块
+		例程优化		
+20、PWR模块
+		例程优化
+21、IWDG模块
+		例程优化
+22、bxCAN模块
+		例程优化
+
+Nationstech.N32WB452_Library.1.1.0版本：
+1、示例代码Flash_Write_Protectio工程nmain.c(V1.0.1)，清除标志作了修改；
+2、示例代码Flash_Program工程main.c(V1.0.1)，错误处理作了修改；
+3、示例代码Flash_DMA_Program工程main.c(V1.0.1)，清除标志作了修改；
+4、驱动n32wb452_flash.c(V1.0.1)，擦写操作增加先清除标志，然后再进行后续操作；
+5、驱动n32wb452_adc.c(V1.0.1),增加void ADC_SetDifChsEnable(ADC_Module* ADCx,uint32_t DifChs)；
+6、触控算法库n32wb452_touch_app.c，
+    1)const TSC_AlgInitThreValue gtsc_list[]做了修改；
+    2)int32_t tsc_alg_isr_callback(tsc_alg_type type, uint32_t event, uint32_t chn, uint32_t value)函数作了修改；
+    3)int32_t app_touch_init(void)函数做了修改；
+    4)static void n32wb452_touch_normal(void)函数作了修改；
+7、触控算法库n32wb452_rtc_hal.c，void WakeUpClockSelect(uint8_t WKUPClkSrcSel)函数作了修改；
+8、devBoardDemo示例代码n32wb452_touch_app.c，
+    1)const TSC_AlgInitThreValue gtsc_list[]作了修改；
+    2)int32_t tsc_alg_isr_callback(tsc_alg_type type, uint32_t event, uint32_t chn, uint32_t value)函数作了修改；
+    3)int32_t app_touch_init(void)函数作了修改；
+    4)static void n32wb452_touch_normal(void)函数作了修改；
+9、驱动n32wb452_tim.h(V1.0.1)，TIM_BDTRInitType结构体修改注释；
+10、驱动n32wb452_rcc.h(V1.0.1)，
+   1)修改了TRNG1MCLK分频的宏定义；
+   2)修改了IS_RCC_TRNG1MCLKPRE(VAL)宏定义；
+11、驱动n32wb452_gpio.h(V1.0.1),修改了IS_GPIO_REMAP(REMAP)宏定义；
+12、驱动n32wb452_flash.h(V1.0.1),
+   1)修改了FLASH_ST枚举定义；
+   2)删除FLASH_INT_ECCERRIE宏定义；
+   3)修改IS_FLASH_INT(IT)宏定义；
+   4)删除FLASH_FLAG_ECCERR宏定义；
+   5)修改了IS_FLASH_CLEAR_FLAG宏定义；
+   6)修改IS_FLASH_GET_FLAG(FLAG宏定义；
+   7)增加了FLASH_STS_CLRFLAG宏定义；
+13、驱动n32wb452_adc.h(V1.0.1)，
+   1)修改了ADC_DIFSEL_CHS_MASK宏定义名称；
+   2)删除ADC_DIFSEL_CHS_0宏定义；
+   3)增加ADC_CTRL3_PDRDY_MSK、ADC_CTRL3_RDY_MSK宏定义；
+   4)修改了ADC_CTRL3_RES枚举定义；
+   5)修改了ADC_InitTypeEx结构体；
+   4)增void ADC_SetDifChs(ADC_Module* ADCx,uint32_t DifChs)声明；
+   5)增void ADC_ConfigClk(ADC_CTRL3_CKMOD ADC_ClkMode, uint32_t RCC_ADCHCLKPrescaler)声明；
+14、驱动n32wb452.h(V1.0.1)，
+    1)FLASH_Module结构体将ECCR变量改为RESERVED2；  
+    2)QSPI_Module结构体变量DAT32~DAT35改为RESERVED2~RESERVED5；
+    3)增加Bit definition for ADC_DIFSEL register宏定义；
+    4)增加Bit definition for ADC_CALFACT register宏定义；
+    5)增加Bit definition for ADC_CTRL3 register宏定义；
+    6)增加Bit definition for ADC_SAMPT3 register宏定义；
+    7)删除FLASH_AC_LATENCY_5、FLASH_STS_ECCERR、FLASH_CTRL_ECCERRITEFLASH_ECCR_ECCLW_MSK、FLASH_ECCR_ECCHW_MSK宏定义；
+    8)修改了HSE_STARTUP_TIMEOUT宏定义值;
+    9)修改了CAN模块寄存器定义结构体;
+    10)ADC_Module结构体去除IPTST变量；
+    11)修改ADC_Module结构体里面的 WDHIGH
+16、驱动n32xx_tsc_alg_api.h(V1.0.1)，
+    1)删除TSC_ALG_RESERVE0宏定义；
+    2)增加TSC_ALG_DEBUG_BUF_SIZE、TSC_ALG_REF_SIZE_PER_CHN宏定义；
+    3)修改tsc_press_key_event_e枚举定义；
+    4)删除calib_level_t枚举定义；
+    5)修改tsc_ret_code_e枚举定义；
+    6)修改tsc_hld_lev_e枚举定义；
+    7)增加tsc_delta_limit_lev_e枚举定义；
+    8)增加tsc_resist_disturb_lev_e枚举定义；
+    9)修改TSC_AlgInitThreValue_t结构体定义；
+17、更新了n32xx_tsc_alg_api.lib 
+18、更新USART工程文件及配置文件（删除未使用的驱动文件），硬件流控Receive_RTS工程删除“数据比对时接收Buffer的1字节偏移”，多处理器模式工程更新LED为PB5/PB4/PA8
+19、更新USART IrDA红外解码功能38kHz载波生成方式，由TIM中断翻转IO改为TIM PWM输出，否则影响IrDA输出数据
+20、新增单线半双工模式DMA示例DMA_HalfDuplex
+21、TSC保留旧版寄存器定义，以宏区分，默认为新的定义方式
+22、新增I2C模块10bit地址读写例程
+23、USB 新增 Mass_Stroage_DataFlash 例程
+24、USB 新增 Virtural_Com_Port 例程
+25、I2C 删除两个多余从设备的例程，同时调整例程为可在同一块板上做验证
+26、DMA 的I2C_DMA例程调整端口
+27、修改CAN1对应GPIO remap定义
+28、USB 新增 JoyStickMouse 例程
+29、驱动n32wb452_tim.c(V1.0.2)，改变TIM_EnableOc1Preload函数为TIM_ConfigOc1Preload；增加TIM_GetAutoReload、TIM_GetCCENStatus函数；
+30、USB 例程修改字符描述符
+31、SPI 新增 SPI_FLASH_DMA 例程
+32、USB 新增 HID_Keyboard_TwoWay 例程
+33、USB 新增 Printer 打印机例程
+
+
