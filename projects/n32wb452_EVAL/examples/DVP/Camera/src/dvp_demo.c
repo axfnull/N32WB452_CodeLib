@@ -36,7 +36,6 @@
 #include "gc0308.h"
 
 #define DVP_InitCamera()        (GC0308_Init())
-#define DVP_REMAP_MODE          0   //(GPIO_RMP1_DVP)
 
 uint32_t DVP_Image[DVP_IMAGE_BUFF_SIZE] = {0};
 
@@ -52,100 +51,27 @@ static void DVP_InitPort(void)
     GPIO_InitStruct.GPIO_Mode  = GPIO_Mode_IN_FLOATING;
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
 
-    if (DVP_REMAP_MODE == 0) /* No remap */
-    {
-        /*  PA1:HSYNC   PA2:VSYNC   PA3:PCLK
-            PA4:D0      PA5:D1      PA6:D2      PA7:D3
-            PC4:D4      PC5:D5      PB0:D6      PB1:D7*/
-        RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_GPIOA
-                                |RCC_APB2_PERIPH_GPIOB
-                                |RCC_APB2_PERIPH_GPIOC, 
-                                 ENABLE);
+    /*  PA1:HSYNC   PA2:VSYNC   PA3:PCLK
+        PA4:D0      PA5:D1      PA6:D2      PA7:D3
+        PC4:D4      PC5:D5      PB0:D6      PB1:D7*/
+    RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_GPIOA
+                            |RCC_APB2_PERIPH_GPIOB
+                            |RCC_APB2_PERIPH_GPIOC, 
+                             ENABLE);
 
-        /*  PORTA */
-        GPIO_InitStruct.Pin = GPIO_PIN_1  | GPIO_PIN_2  | GPIO_PIN_3  
-                            | GPIO_PIN_4  | GPIO_PIN_5  | GPIO_PIN_6  
-                            | GPIO_PIN_7;
-        GPIO_InitPeripheral(GPIOA, &GPIO_InitStruct);
+    /*  PORTA */
+    GPIO_InitStruct.Pin = GPIO_PIN_1  | GPIO_PIN_2  | GPIO_PIN_3  
+                        | GPIO_PIN_4  | GPIO_PIN_5  | GPIO_PIN_6  
+                        | GPIO_PIN_7;
+    GPIO_InitPeripheral(GPIOA, &GPIO_InitStruct);
 
-        /*  PORTB */
-        GPIO_InitStruct.Pin = GPIO_PIN_0  | GPIO_PIN_1;
-        GPIO_InitPeripheral(GPIOB, &GPIO_InitStruct);
+    /*  PORTB */
+    GPIO_InitStruct.Pin = GPIO_PIN_0  | GPIO_PIN_1;
+    GPIO_InitPeripheral(GPIOB, &GPIO_InitStruct);
 
-        /*  PORTC */
-        GPIO_InitStruct.Pin = GPIO_PIN_4  | GPIO_PIN_5;
-        GPIO_InitPeripheral(GPIOC, &GPIO_InitStruct);
-    }
-    else if (DVP_REMAP_MODE == GPIO_RMP1_DVP)    /* Remap==1 */
-    {
-        /*  PE2:HSYNC   PE3:VSYNC   PE4:PCLK
-            PE5:D0      PE6:D1      PC0:D2      PB2:D3
-            PF12:D4     PF13:D5     PF14:D6     PF15:D7 */
-        RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_GPIOE
-                                |RCC_APB2_PERIPH_GPIOB
-                                |RCC_APB2_PERIPH_GPIOC
-                                |RCC_APB2_PERIPH_GPIOF
-                                |RCC_APB2_PERIPH_AFIO, 
-                                 ENABLE);
-
-        /* Pin remap */
-        GPIO_ConfigPinRemap(GPIO_RMP1_DVP, ENABLE);
-
-        /* PORTE */
-        GPIO_InitStruct.Pin = GPIO_PIN_2  | GPIO_PIN_3  | GPIO_PIN_4  
-                            | GPIO_PIN_5  | GPIO_PIN_6;
-        GPIO_InitPeripheral(GPIOE, &GPIO_InitStruct);
-
-        /* PORTC */
-        GPIO_InitStruct.Pin = GPIO_PIN_0;
-        GPIO_InitPeripheral(GPIOC, &GPIO_InitStruct);
-
-        /* PORTB */
-        GPIO_InitStruct.Pin = GPIO_PIN_2;
-        GPIO_InitPeripheral(GPIOB, &GPIO_InitStruct);
-
-        /* PORTF */
-        GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14  
-                            | GPIO_PIN_15;
-        GPIO_InitPeripheral(GPIOF, &GPIO_InitStruct);
-    }
-    else if (DVP_REMAP_MODE == GPIO_RMP3_DVP)        /* Remap==3 */
-    {
-        /*  PE2:HSYNC   PE3:VSYNC   PE4:PCLK
-            PE5:D0      PE6:D1      PC0:D2      PB2:D3
-            PB10:D4     PB11:D5     PF14:D6     PF15:D7 */
-        RCC_EnableAPB2PeriphClk( RCC_APB2_PERIPH_GPIOE
-                                |RCC_APB2_PERIPH_GPIOB
-                                |RCC_APB2_PERIPH_GPIOC
-                                |RCC_APB2_PERIPH_GPIOF
-                                |RCC_APB2_PERIPH_AFIO, 
-                                 ENABLE);
-
-        /* Pin remap */
-        GPIO_ConfigPinRemap(GPIO_RMP3_DVP, ENABLE);
-
-        /* PORTE */
-        GPIO_InitStruct.Pin = GPIO_PIN_2  | GPIO_PIN_3  | GPIO_PIN_4  
-                            | GPIO_PIN_5  | GPIO_PIN_6;
-        GPIO_InitPeripheral(GPIOE, &GPIO_InitStruct);
-
-        /* PORTC */
-        GPIO_InitStruct.Pin = GPIO_PIN_0;
-        GPIO_InitPeripheral(GPIOC, &GPIO_InitStruct);
-
-        /* PORTB */
-        GPIO_InitStruct.Pin = GPIO_PIN_2  | GPIO_PIN_10 | GPIO_PIN_11;
-        GPIO_InitPeripheral(GPIOB, &GPIO_InitStruct);
-
-        /* PORTF */
-        GPIO_InitStruct.Pin = GPIO_PIN_14 | GPIO_PIN_15;
-        GPIO_InitPeripheral(GPIOF, &GPIO_InitStruct);
-    }
-    else
-    {
-        while (1)
-            ;
-    }
+    /*  PORTC */
+    GPIO_InitStruct.Pin = GPIO_PIN_4  | GPIO_PIN_5;
+    GPIO_InitPeripheral(GPIOC, &GPIO_InitStruct);
 }
 
 /**

@@ -28,7 +28,7 @@
 /**
  * @file n32wb452_rcc.h
  * @author Nations
- * @version v1.0.2
+ * @version v1.0.3
  *
  * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
  */
@@ -497,8 +497,6 @@ typedef struct
 #define RCC_APB2_PERIPH_GPIOC  ((uint32_t)0x00000010)
 #define RCC_APB2_PERIPH_GPIOD  ((uint32_t)0x00000020)
 #define RCC_APB2_PERIPH_GPIOE  ((uint32_t)0x00000040)
-#define RCC_APB2_PERIPH_GPIOF  ((uint32_t)0x00000080)
-#define RCC_APB2_PERIPH_GPIOG  ((uint32_t)0x00000100)
 #define RCC_APB2_PERIPH_TIM1   ((uint32_t)0x00000800)
 #define RCC_APB2_PERIPH_SPI1   ((uint32_t)0x00001000)
 #define RCC_APB2_PERIPH_TIM8   ((uint32_t)0x00002000)
@@ -618,6 +616,19 @@ typedef struct
      || ((FLAG) == RCC_FLAG_LPWRRST))
 
 #define IS_RCC_CALIB_VALUE(VALUE) ((VALUE) <= 0x1F)
+
+
+/**
+ * @}
+ */
+
+/** @addtogroup RCC_SYSCLKConfigFromSTOP
+ * @{
+ */
+
+#define PLL_STARTUP_TIMEOUT     ((uint16_t)0xF000)
+#define SYSCLK_STARTUP_TIMEOUT  ((uint16_t)0xF000)
+
 /**
  * @}
  */
@@ -686,6 +697,8 @@ FlagStatus RCC_GetFlagStatus(uint8_t RCC_FLAG);
 void RCC_ClrFlag(void);
 INTStatus RCC_GetIntStatus(uint8_t RccInt);
 void RCC_ClrIntPendingBit(uint8_t RccInt);
+
+void RCC_SYSCLKConfigFromSTOP(uint32_t Rcc_PLLMul, uint32_t FLASH_Latency);
 
 #ifdef __cplusplus
 }

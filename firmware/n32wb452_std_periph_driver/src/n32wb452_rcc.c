@@ -28,7 +28,7 @@
 /**
  * @file n32wb452_rcc.c
  * @author Nations
- * @version v1.0.1
+ * @version v1.0.3
  *
  * @copyright Copyright (c) 2019, Nations Technologies Inc. All rights reserved.
  */
@@ -225,7 +225,7 @@ void RCC_DeInit(void)
     RCC->CFG2 = 0x00003800;
 
     /* Reset CFG3 register */
-    RCC->CFG3 = 0x00003800;
+    RCC->CFG3 = 0x00003840;
 
     /* Disable all interrupts and clear pending bits  */
     RCC->CLKINT = 0x009F0000;
@@ -973,7 +973,7 @@ void RCC_EnableAHBPeriphClk(uint32_t RCC_AHBPeriph, FunctionalState Cmd)
  *   This parameter can be any combination of the following values:
  *     @arg RCC_APB2_PERIPH_AFIO, RCC_APB2_PERIPH_GPIOA, RCC_APB2_PERIPH_GPIOB,
  *          RCC_APB2_PERIPH_GPIOC, RCC_APB2_PERIPH_GPIOD, RCC_APB2_PERIPH_GPIOE,
- *          RCC_APB2_PERIPH_GPIOF, RCC_APB2_PERIPH_GPIOG, RCC_APB2_PERIPH_TIM1,
+ *          RCC_APB2_PERIPH_TIM1,
  *          RCC_APB2_PERIPH_SPI1, RCC_APB2_PERIPH_TIM8, RCC_APB2_PERIPH_USART1,
  *          RCC_APB2_PERIPH_DVP, RCC_APB2_PERIPH_UART6, RCC_APB2_PERIPH_UART7,
  *          RCC_APB2_PERIPH_I2C3, RCC_APB2_PERIPH_I2C4
@@ -1057,7 +1057,7 @@ void RCC_EnableAHBPeriphReset(uint32_t RCC_AHBPeriph, FunctionalState Cmd)
  *   This parameter can be any combination of the following values:
  *     @arg RCC_APB2_PERIPH_AFIO, RCC_APB2_PERIPH_GPIOA, RCC_APB2_PERIPH_GPIOB,
  *          RCC_APB2_PERIPH_GPIOC, RCC_APB2_PERIPH_GPIOD, RCC_APB2_PERIPH_GPIOE,
- *          RCC_APB2_PERIPH_GPIOF, RCC_APB2_PERIPH_GPIOG, RCC_APB2_PERIPH_TIM1,
+ *          RCC_APB2_PERIPH_TIM1,
  *          RCC_APB2_PERIPH_SPI1, RCC_APB2_PERIPH_TIM8, RCC_APB2_PERIPH_USART1,
  *          RCC_APB2_PERIPH_DVP, RCC_APB2_PERIPH_UART6, RCC_APB2_PERIPH_UART7,
  *          RCC_APB2_PERIPH_I2C3, RCC_APB2_PERIPH_I2C4
@@ -1341,6 +1341,85 @@ void RCC_ClrIntPendingBit(uint8_t RccInt)
     /* Perform Byte access to RCC_CLKINT[23:16] bits to clear the selected interrupt
        pending bits */
     *(__IO uint8_t*)CLKINT_BYTE3_ADDR = RccInt;
+}
+
+/**
+ * @brief  Configures system clock after wake-up from STOP: enable HSE, PLL
+ *         and select PLL as system clock source.
+ * @param  Rcc_PLLMul specifies the PLL multiplication factor.
+ *    this parameter can be RCC_PLLMul_x where x:[2,32]
+ * @param FLASH_Latency specifies the FLASH Latency value.
+ *   This parameter can be one of the following values:
+ *     @arg FLASH_LATENCY_0 FLASH Zero Latency cycle
+ *     @arg FLASH_LATENCY_1 FLASH One Latency cycle
+ *     @arg FLASH_LATENCY_2 FLASH Two Latency cycles
+ *     @arg FLASH_LATENCY_3 FLASH Three Latency cycles
+ *     @arg FLASH_LATENCY_4 FLASH Four Latency cycles
+ */
+void RCC_SYSCLKConfigFromSTOP(uint32_t Rcc_PLLMul, uint32_t FLASH_Latency)
+{
+    __IO uint32_t StartUpCounter = 0, HSEStatus = 0, PLLStatus = 0, SYSCLKStatus = 0;
+    uint32_t tmpregister = 0;
+    /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/
+    /* Enable HSE */
+    RCC->CTRL |= ((uint32_t)RCC_CTRL_HSEEN);
+    /* Wait till HSE is ready and if Time out is reached exit */
+    do
+    {
+       HSEStatus = RCC->CTRL & RCC_CTRL_HSERDF;
+       StartUpCounter++;
+    } while ((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+
+    if ((RCC->CTRL & RCC_CTRL_HSERDF) != RESET)
+    {
+       HSEStatus = (uint32_t)0x01;
+    }
+    else
+    {
+       HSEStatus = (uint32_t)0x00;
+    }
+    if (HSEStatus == (uint32_t)0x01)
+    {
+        /* Enable Prefetch Buffer */
+        FLASH->AC |= FLASH_AC_PRFTBFEN;
+        /* Read the AC register */
+        tmpregister = FLASH->AC;
+        /* Sets the Latency value */
+        tmpregister &= (uint32_t)((uint32_t)~FLASH_AC_LATENCY);
+        tmpregister |= FLASH_Latency;
+        /* Write the AC register */
+        FLASH->AC = tmpregister;
+        /* HCLK = SYSCLK */
+        RCC->CFG |= (uint32_t)RCC_CFG_AHBPRES_DIV1;
+        /* PCLK2 = HCLK */
+        RCC->CFG |= (uint32_t)RCC_CFG_APB2PRES_DIV2;
+        /* PCLK1 = HCLK */
+        RCC->CFG |= (uint32_t)RCC_CFG_APB1PRES_DIV4;
+        /*  PLL configuration: PLLCLK = HSE * 18 = 144 MHz */
+        RCC->CFG &= (uint32_t)((uint32_t) ~(RCC_CFG_PLLSRC | RCC_CFG_PLLHSEPRES | RCC_CFG_PLLMULFCT));
+        RCC->CFG |= (uint32_t)(RCC_CFG_PLLSRC_HSE | Rcc_PLLMul);
+        /* Enable PLL */
+        RCC->CTRL |= RCC_CTRL_PLLEN;
+        /* Wait till PLL is ready and if Time out is reached exit */
+        do
+        {
+           PLLStatus = RCC->CTRL & RCC_CTRL_PLLRDF;
+           StartUpCounter++;
+        } while ((PLLStatus != RCC_CTRL_PLLRDF) && (StartUpCounter != PLL_STARTUP_TIMEOUT));
+        /* Select PLL as system clock source */
+        RCC->CFG &= (uint32_t)((uint32_t) ~(RCC_CFG_SCLKSW));
+        RCC->CFG |= (uint32_t)RCC_CFG_SCLKSW_PLL;
+        /* Wait till PLL is used as system clock source */
+        do
+        {
+           SYSCLKStatus = RCC->CFG & (uint32_t)RCC_CFG_SCLKSTS;
+           StartUpCounter++;
+        } while ((SYSCLKStatus != RCC_CFG_SCLKSTS_PLL) && (StartUpCounter != SYSCLK_STARTUP_TIMEOUT));
+    }
+    else
+    { /* If HSE fails to start-up, the application will have wrong clock
+         configuration. User can add here some code to deal with this error */
+    }
 }
 
 /**

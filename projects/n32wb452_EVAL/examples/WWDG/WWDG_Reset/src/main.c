@@ -91,17 +91,7 @@ void Delay(__IO uint32_t nTime)
 //    {
 //        RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOB, ENABLE);
 //    }
-//    else if (GPIOx == GPIOF)
-//    {
-//        RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOF, ENABLE);
-//    }
-//    else
-//    {
-//        if (GPIOx == GPIOG)
-//        {
-//            RCC_EnableAPB2PeriphClk(RCC_APB2_PERIPH_GPIOG, ENABLE);
-//        }
-//    }
+
 
 //    /* Configure the GPIO pin */
 ////    if (Pin <= GPIO_PIN_ALL)

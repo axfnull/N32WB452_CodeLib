@@ -77,7 +77,7 @@ void ADC_Config(ADC_Module *ADCx, adc_sample_ch ch)
     GPIO_InitStructure.GPIO_Speed   = GPIO_INPUT;
     GPIO_InitPeripheral(ADC_PORT, &GPIO_InitStructure);
 
-    RCC_ConfigAdcPllClk(RCC_ADCPLLCLK_DIV6, ENABLE); //设置ADC分频因子6 72M/6=12,ADC最大时间不能超过14M
+    ADC_ConfigClk(ADC_CTRL3_CKMOD_AHB,RCC_ADCHCLK_DIV16); //设置ADC分频因子,ADC最大时间不能超过14M
 
     /* ADCs DeInit */
     ADC_DeInit(ADCx);

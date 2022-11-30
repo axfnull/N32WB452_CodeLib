@@ -14,16 +14,16 @@
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
-          <Device>N32WB452REQ6</Device>
+          <Device>N32WB452LEQ6</Device>
           <Vendor>Nationstech</Vendor>
-          <PackID>Nationstech.N32WB452_DFP.1.0.2</PackID>
+          <PackID>Nationstech.N32WB452_DFP.1.0.3</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x24000) IROM(0x08000000,0x80000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
-          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0N32WB452 -FS08000000 -FL080000 -FP0($$Device:N32WB452REQ6$Flash\N32WB452.FLM))</FlashDriverDll>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0N32WB452 -FS08000000 -FL080000 -FP0($$Device:N32WB452LEQ6$Flash\N32WB452.FLM))</FlashDriverDll>
           <DeviceId>0</DeviceId>
-          <RegisterFile>$$Device:N32WB452REQ6$firmware\CMSIS\device\n32wb452.h</RegisterFile>
+          <RegisterFile>$$Device:N32WB452LEQ6$firmware\CMSIS\device\n32wb452.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:N32WB452REQ6$svd\N32WB452.svd</SFDFile>
+          <SFDFile>$$Device:N32WB452LEQ6$svd\N32WB452.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>

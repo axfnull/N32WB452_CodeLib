@@ -1,0 +1,499 @@
+﻿Nationstech.N32WB452_Library.2.1.0版本：
+1.新增GCC下载配置文件和启动文件
+2.修改I2C模块复位函数，增加I2C3,I2C4复位判断
+3.flash模块 drvier文件删除已定义未使用变量
+4.GPIO模块 例程删除已定义未使用变量
+5.USART模块 例程删除已定义未使用变量
+6.ADC 例程优化
+      初始化函数增加在时钟配置上1M的初始化配置
+      驱动添加对ADC_CTRL3的CKMOD操作
+      新增ADC_CLOCK_AHB、ADC_CLOCK_PLL宏定义及相关配置函数
+7.system_init RCC 配置寄存器2，配置寄存器3复位值修改
+8.exit deinit 复位值修改
+9.RCC：
+	deinit 配置寄存器3复位值修改
+	例程优化
+10.删除GPIOF、GPIOG相关内容
+11.RT-Thread:
+	更新相关文件
+	新增例程
+12.更新蓝牙驱动库
+13.修改USB驱动usb_regs.h文件里的_BlocksOf32宏，wNBlocks << 11改为wNBlocks << 10
+14.NVIC
+	更新IRQ_Mask例程按下按键打印停止，再按下无法继续打印问题
+15.iCache coreMark跑分优化
+16.修改SPI FLASH中的W25Q128擦除命令宏定义
+17.TIM_Basic6 Demo的PCLK1改成4分频
+18.misc.c/.h文件：
+	注释掉SysTick_CLKSource_HCLK_Div8
+	更新IS_SYSTICK_CLK_SOURCE
+19.RTC模块 drvier文件删除已定义未使用变量
+20.DVP模块例程：
+	因WB452不支持PFx，PGx端口，删除未使用的DVP端口定义
+	删除多余的文件，避免编译错误
+21.I2C_Slave_Int例程main函数优化
+22.SDIO例程优化，删除未使用变量
+23.n32wb452_it.c文件删除未使用变量
+24.USB新增DEMO Virtual_COM_Port_LoopBack
+25.readme新增英文描述
+26.USB demo 关闭ERROR和ESOF中断
+27.更新RTC demo中的SYSCLKConfig_STOP函数中对Flash latency配置方式
+28. TIMx_DCTRL后面的寄存器无法应用DMA Burst功能，修改相应代码
+29. 增加I2C MASTER INT demo中的错误中断服务函数
+30.将 SYSCLKConfig_STOP(uint32_t RCC_PLLMULL) 中的FLASH->AC 更换成变量操作
+
+
+
+Nationstech.N32WB452_Library.2.0.0版本：
+版本变更 1.3.0->2.0.0
+1.USART模块
+	USART初始化函数,波特率设置优化
+	
+Nationstech.N32WB452_Library.1.3.0版本：
+1、I2C模块
+	读单字节数据是判断标志修改
+	初始化函数，时钟判断修改
+2、log.c
+	修改fputc函数发送完成判断标志
+Nationstech.N32WB452_Library.1.2.0版本：
+1、 公共文件n32wb452.h修正了几个宏定义：
+        RCC_CFG_USBPRES_PLLDIV3、RCC_CFG_USBPRES_PLLDIV2、RCC_APB1ENR_OPAMPEN、
+        RCC_CSR_MMURSTF、FLASH_AC_LATENCY
+2、 公共文件log.c、log.h：
+        修改调试UART端口为PA9/PA10
+3、 SPI模块：
+        新增 SPI_RECORDER 例程
+        新增 SPI_FLASH_DMA 例程
+4、 USB模块：
+        新增 Audio_Speaker 例程
+        新增 HID_Keyboard_TwoWay 例程
+        新增 Printer 例程
+        修改USB例程挂起后进入低功耗模式
+5、 RCC模块，驱动n32wb452_rcc.c/h中：
+        更新RCC_HSE_DISABLE宏定义名称
+        更新RCC_ADC1MCLK_SRC_HSE宏定义的值
+6、 FLASH模块，驱动n32wb452_flash/h中：
+        更新FLASH_SetSMPSELStatus函数定义
+        更新FLASH_GetSMPSELStatus函数定义
+        删除RCC_ConfigEthClk相关定义
+7、 ADC模块，驱动n32wb452_adc.c/h中：
+        修改了ADC_SetDifChsEnable函数名称；
+        修改了ADC 模式寄存器位定义名称；
+        增加对校准功能的函数重入性控制
+8、 RTC模块：
+        优化RTC TimeStamp例程
+        例程优化
+9、SDIO模块，优化例程uSDCard：
+        增加中断回调函数
+        添加宏开关，切换单块读写和多块读写
+10、USART模块：
+        IrDA_Tx&Rx DEMO Receive测例和Transmit测例合并成Transmit_Receive测例
+        IrDA_Tx&Rx DEMO 新增LP_Transmit_Receive测例
+11、I2C模块：
+        优化驱动n32wb452_i2c.c/h，修改I2C初始化函数
+        优化所有DEMO，修改端口配置及应用流程
+12、TIM模块：
+        修改TIM_EnableOc1Preload函数为TIM_ConfigOc1Preload
+        增加TIM_GetAutoReload、TIM_GetCCENStatus函数
+13、DVP模块：
+        完善针对C++的文件头宏定义  #ifdef __cplusplus } #endif
+14、BLE模块：
+        更新驱动库文件（KEIL:16bit/32bit,IAR:16bit）
+        优化slave、devBoardDemo例程便于演示
+15、所有模块增加IAR工程示例
+16、新增RT-Thread系统例程
+17、WWDG模块
+		例程优化
+18、RTC模块
+		例程优化		
+19、PWR模块
+		例程优化
+20、IWDG模块
+		例程优化
+21、bxCAN模块
+		例程优化
+
+Nationstech.N32WB452_Library.1.1.0版本：
+1、示例代码Flash_Write_Protectio工程main.c(V1.0.1)，清除标志作了修改；
+2、示例代码Flash_Program工程main.c(V1.0.1)，错误处理作了修改；
+3、示例代码Flash_DMA_Program工程main.c(V1.0.1)，清除标志作了修改；
+4、驱动n32wb452_flash.c(V1.0.1)，擦写操作增加先清除标志，然后再进行后续操作；
+5、驱动n32wb452_adc.c(V1.0.1),增加void ADC_SetDifChsEnable(ADC_Module* ADCx,uint32_t DifChs)；
+6、驱动n32wb452_tim.h(V1.0.1)，TIM_BDTRInitType结构体修改注释；
+7、驱动n32wb452_rcc.h(V1.0.1)，
+   1)修改了TRNG1MCLK分频的宏定义；
+   2)修改了IS_RCC_TRNG1MCLKPRE(VAL)宏定义；
+8、驱动n32wb452_gpio.h(V1.0.1),修改了IS_GPIO_REMAP(REMAP)宏定义；
+9、驱动n32wb452_flash.h(V1.0.1),
+   1)修改了FLASH_ST枚举定义；
+   2)删除FLASH_INT_ECCERRIE宏定义；
+   3)修改IS_FLASH_INT(IT)宏定义；
+   4)删除FLASH_FLAG_ECCERR宏定义；
+   5)修改了IS_FLASH_CLEAR_FLAG宏定义；
+   6)修改IS_FLASH_GET_FLAG(FLAG)宏定义；
+   7)增加了FLASH_STS_CLRFLAG宏定义；
+10、驱动n32wb452_adc.h(V1.0.1)，
+   1)修改了ADC_DIFSEL_CHS_MASK宏定义名称；
+   2)删除ADC_DIFSEL_CHS_0宏定义；
+   3)增加ADC_CTRL3_PDRDY_MSK、ADC_CTRL3_RDY_MSK宏定义；
+   4)修改了ADC_CTRL3_RES枚举定义；
+   5)修改了ADC_InitTypeEx结构体；
+   6)新增void ADC_SetDifChs(ADC_Module* ADCx,uint32_t DifChs)声明；
+   7)新增void ADC_ConfigClk(ADC_CTRL3_CKMOD ADC_ClkMode, uint32_t RCC_ADCHCLKPrescaler)声明；
+11、驱动n32wb452.h(V1.0.1)，
+    1)FLASH_Module结构体将ECCR变量改为RESERVED2；  
+    2)QSPI_Module结构体变量DAT32~DAT35改为RESERVED2~RESERVED5；
+    3)增加Bit definition for ADC_DIFSEL register宏定义；
+    4)增加Bit definition for ADC_CALFACT register宏定义；
+    5)增加Bit definition for ADC_CTRL3 register宏定义；
+    6)增加Bit definition for ADC_SAMPT3 register宏定义；
+    7)删除FLASH_AC_LATENCY_5、FLASH_STS_ECCERR、FLASH_CTRL_ECCERRITEFLASH_ECCR_ECCLW_MSK、FLASH_ECCR_ECCHW_MSK宏定义；
+    8)修改了HSE_STARTUP_TIMEOUT宏定义值;
+    9)修改了CAN模块寄存器定义结构体;
+    10)ADC_Module结构体去除IPTST变量；
+    11)修改ADC_Module结构体里面的 WDHIGH
+12、更新USART工程文件及配置文件（删除未使用的驱动文件），硬件流控Receive_RTS工程删除“数据比对时接收Buffer的1字节偏移”，多处理器模式工程更新LED为PB5/PB4/PA8
+13、更新USART IrDA红外解码功能38kHz载波生成方式，由TIM中断翻转IO改为TIM PWM输出，否则影响IrDA输出数据
+14、新增单线半双工模式DMA示例DMA_HalfDuplex
+15、新增I2C模块10bit地址读写例程
+16、USB 新增 Mass_Stroage_DataFlash 例程
+17、USB 新增 Virtural_Com_Port 例程
+18、I2C 删除两个多余从设备的例程，同时调整例程为可在同一块板上做验证
+19、DMA 的I2C_DMA例程调整端口
+20、修改CAN1对应GPIO remap定义
+21、USB 新增 JoyStickMouse 例程
+22、驱动n32wb452_tim.c(V1.0.2)，改变TIM_EnableOc1Preload函数为TIM_ConfigOc1Preload；增加TIM_GetAutoReload、TIM_GetCCENStatus函数；
+23、USB 例程修改字符描述符
+24、SPI 新增 SPI_FLASH_DMA 例程
+25、USB 新增 HID_Keyboard_TwoWay 例程
+26、USB 新增 Printer 打印机例程
+27、RCC 新增 RCC_SYSCLKConfigFromSTOP库函数
+
+
+Nationstech.N32WB452_ Library.2.1.0 Version:
+
+1. Add GCC download configuration file and startup file
+
+2. Modify the I2C module reset function and add I2C3 and I2C4 reset judgment
+
+3. Delete the defined unused variables in the flash module drvier file
+
+4. GPIO module routine delete defined unused variables
+
+5. USART module routine deletes defined unused variables
+
+6. ADC routine optimization
+
+	The initialization function adds 1M initialization configuration on the clock configuration
+
+	Add driver to ADC CTRl3.CKMOD operation
+
+7.system_ Init RCC configuration register 2, configuration register 3 reset value modification
+
+8. Exit deinit reset value modify
+
+9. RCC deinit configuration register 3 reset value modify
+
+	Routine optimization
+
+10. Delete relevant contents of GPIOF and GPIOG
+
+11.RT-Thread:
+
+	Update relevant documents
+
+	New routine
+
+12. Update Bluetooth driver library
+
+13. Modify USB drive USB_ regs.h in the document  _BlocksOf32 macro, wNBlocks < < 11 changed to wNBlocks << 10
+
+14.NVIC
+
+	Update IRQ_ Mask routine press the key to stop printing, and then press it again to continue printing
+
+15. Icache coremark run point optimization
+
+16. Modify w25q128 erase command macro definition in SPI flash
+
+17.TIM Basic6 Demo PCLK1 changed to 4 frequency division.
+
+18. misc.c/.h file:  
+
+	Comment out SysTick_CLKSource_HCLK_Div8  
+
+	Update IS_SYSTICK_CLK_SOURCE
+
+19. Delete defined unused variables from RTC module drvier file
+
+20.DVP module routines:  
+
+	Delete the unused DVP port definition because WB452 does not support PFx and PGx ports  
+
+	Delete unnecessary files to avoid compilation errors
+
+21.I2C_Slave_Int routine main function optimization
+
+22.SDIO routine optimization, delete unused variables  
+
+23. Delete unused variables from the n32wb452_it.c  
+
+24. Added DEMO Virtual_COM_Port_LoopBack for USB
+
+25. readme added English description
+
+26. USB demo ERROR and ESOF interrupt closed
+
+27.updatesd SYSCLKConfig_STOP funtions in RTC demo for Flash latency configuration
+
+28. TIM_DCTRL‘s subsequent register cannot apply the DAM Burst function, and modify the corresponding code 
+29. Added error interrupt service function in I2C MASTER INT demo.  
+30.replace FLASH->AC in SYSCLKConfig_STOP(uint32_t RCC_PLLMULL) with variable operation
+
+Nationstech.N32WB452_Library.2.0.0 Version:
+
+Version change 1.3.0->2.0.0
+
+1. USART module
+
+USART initialization function, baud rate setting optimization
+
+
+
+Nationstech.N32WB452_Library.1.3.0 Version :
+
+1. I2C module
+
+Reading single byte data is the modification of judgment flag
+
+Initialization function, clock judgment modify
+
+2、log.c
+
+Modify fputc function sending completion judgment flag
+
+Nationstech.N32WB452_Library.1.2.0 Version:
+
+1. Public file n32wb452.h fixed several macro definitions:
+
+RCC_ CFG_ USBPRES_ PLLDIV3、RCC_ CFG_ USBPRES_ PLLDIV2、RCC_ APB1ENR_ OPAMPEN、
+
+RCC_ CSR_ MMURSTF、FLASH_ AC_ LATENCY
+
+2. Public file log.c、log.h：
+
+Modify the debugging UART port to PA9/PA10
+
+3. SPI module:
+
+New SPI_RECORDER routine
+
+New SPI_FLASH_DMA routine
+
+4. USB module:
+
+New Audio_Speaker routine
+
+Add HID_Keyboard_TwoWay routine
+
+New Printer routine
+
+Enter low power mode after modifying the USB routine to suspend
+
+5. RCC module,  in drive n32wb452_rcc.c/h:
+
+Update RCC_HSE_DISABLE macro definition name
+
+Update RCC_ ADC1MCLK_SRC_HSE macro defined value
+
+6. Flash module, in drive n32wb452_flash.c/h:
+
+Update FLASH_SetSMPSELStatus function definition
+
+Update FLASH_GetSMPSELStatus function definition
+
+Delete RCC_ConfigEthClk related definitions
+
+7. ADC module,  In driving n32wb452_adc.c/h:
+
+Modified ADC_SetDifChsEnable function name;
+
+The ADC mode register bit definition name is modified;
+
+Add function reentrancy control for calibration function
+
+8. RTC Module:  
+
+Optimize the RTC TimeStamp routine  
+
+Routine optimization 
+
+9. SDIO module, optimization routine uSDCard:  
+
+Added interrupt callback function  
+
+Add macro switch to switch single block read/write and multiple block read/write  
+
+10. USART Module:  
+
+IrDA_Tx&Rx DEMO Receive and Transmit tests are merged into Transmit_Receive tests  
+
+IrDA_Tx&Rx DEMO New LP_Transmit_Receive test  
+
+11. I2C module:  
+
+Optimize driver N32wB452_i2c. C /h, modify I2C initialization function  
+
+Optimized all DEMO, modified port configuration and application flow  
+
+12. TIM Module:  
+
+Change TIM_EnableOc1Preload to TIM_ConfigOc1Preload  
+
+Add TIM_GetAutoReload and TIM_GetCCENStatus functions  
+
+13. DVP module:  
+Improve the definition of header macros for C++
+#ifdef __cplusplus} #endif  
+
+14. BLE module:  
+
+Update driver library file (KEIL: 16 bit / 32 bit, IAR: 16 bit)  
+
+Optimize slave, devBoardDemo routines for easy demonstration
+
+15. Add IAR project examples for all modules  
+
+16. Added rt-Thread system routine  
+
+17. WWDG module  
+
+Routine optimization  
+
+18. RTC module  
+
+Routine optimization  
+
+19. PWR module  
+
+Routine optimization  
+
+20. IWDG module  
+
+Routine optimization  
+
+21. BxCAN module  
+
+Routine optimization
+
+
+
+Nationstech.N32WB452_Library.1.1.0 version:  
+
+1. Example code Flash_Write_Protectio project main.c(V1.0.1), the clear flag has been modified;  
+
+2. Example code Flash_Program project main.c(V1.0.1), error handling has been modified;  
+
+3. Example code Flash_DMA_Program project main.c(V1.0.1), the clear mark has been modified;  
+
+4, drive N32wB452_flash.c (V1.0.1), erase operation added first clear flag, and then subsequent operations;  
+
+5,drive n32wb452_adc.c (V1.0.1); void ADC_SetDifChsEnable(ADC_Module* ADCx, Uint32_t DifChs)  
+
+6, drive n32wb452_tim.h(V1.0.1), TIM_BDTRInitType structure modification annotation;  
+
+7, drive N32wb452_rcc.h(V1.0.1),  
+
+1) modified the macro definition of TRNG1MCLK frequency division;  
+
+2) Modified IS_RCC_TRNG1MCLKPRE(VAL) macro definition;  
+
+8, drive N32wb452_gpio.h(V1.0.1), modify IS_GPIO_REMAP(REMAP) macro definition;  
+
+N32wb452_flash.h (V1.0.1),  
+
+1) Modified the FLASH_ST enumeration definition;  
+
+2) Delete FLASH_INT_ECCERRIE macro definition;  
+
+3)Modified the IS_FLASH_INT(IT) macro definition;  
+
+4) Delete the FLASH_FLAG_ECCERR macro definition;  
+
+5) Modified IS_FLASH_CLEAR_FLAG macro definition;  
+
+6) Modified IS_FLASH_GET_FLAG(FLAG) macro definition;  
+
+7) Added FLASH_STS_CLRFLAG macro definition;  
+
+10. Drive N32WB452_ADC.h(V1.0.1),  
+
+1) Modified ADC_DIFSEL_CHS_MASK macro definition name;  
+
+2) Delete ADC_DIFSEL_CHS_0 macro definition;  
+
+3) Add ADC_CTRL3_PDRDY_MSK and ADC_CTRL3_RDY_MSK macro definitions;  
+
+4) Modified the ADC_CTRL3_RES enumeration definition;  
+
+5) Modified the ADC_InitTypeEx structure;  
+
+6) Add Void ADC_SetDifChs(ADC_Module* ADCx,uint32_t DifChs) declaration;  
+
+7) Add void ADC_ConfigClk(ADC_CTRL3_CKMOD ADC_ClkMode, Uint32_t RCC_ADCHCLKPrescaler) declaration; 
+
+11. Drive N32wB452.h (V1.0.1)
+
+1) The FLASH_Module structure changes the ECCR variable to RESERVED2;
+
+2) change the QSPI_Module variable DAT32~DAT35 to RESERVED2~RESERVED5;
+
+3) Add Bit Definition for ADC_DIFSEL register macro definition;
+
+4) Add Bit Definition for ADC_CALFACT Register macro definition;
+
+5) Add Bit definition for ADC_CTRL3 register macro definition;
+
+6) Add Bit Definition for ADC_SAMPT3 register macro definition;
+
+7) Delete FLASH_AC_LATENCY_5, FLASH_STS_ECCERR, FLASH_CTRL_ECCERRITEFLASH_ECCR_ECCLW_MSK, FLASH_ECCR_ECCHW_MSK macro definitions;
+
+8) Changed the HSE_STARTUP_TIMEOUT macro definition value;
+
+9) Modified CAN module register definition structure;
+
+10) Remove IPTST variable from ADC_Module;
+
+11) Modify WDHIGH in ADC_Module
+
+12. Update USART engineering files and configuration files (delete unused driver files), delete "1-byte offset of received Buffer during data comparison" in hardware flow control Receive_RTS project, and update LED to PB5/PB4/PA8 in multi-processor mode project
+
+13. Update the USART IrDA infrared decoding function 38kHz carrier generation mode from TIM interrupt flip IO to TIM PWM output; otherwise, IrDA output data will be affected
+
+14. Added single-line half-duplex DMA example DMA_HalfDuplex
+
+15. Added 10bit address read and write routines of I2C module
+
+16. USB added Mass_Stroage_DataFlash routine
+
+17. USB added the Virtural_Com_Port routine
+
+18. I2C deletes two routines of redundant slave devices and adjusts the routines so that they can be verified on the same board
+
+19. DMA I2C_DMA routine adjustment port
+
+20. Modify the GPIO remap definition corresponding to CAN1
+
+21. USB added JoyStickMouse routine
+
+22, Drive n32wb452_tim.c(V1.0.2), change TIM_EnableOc1Preload funtion to TIM_ConfigOc1Preload; Add TIM_GetAutoReload and TIM_GetCCENStatus functions;
+
+23. USB routines modify character descriptors
+
+24. SPI added SPI_FLASH_DMA routine
+
+25, USB added HID_Keyboard_TwoWay routine
+
+26, USB new Printer routine
+
+27, RCC add RCC_SYSCLKConfigFromSTOP library function

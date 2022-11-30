@@ -7,7 +7,7 @@
     软件开发环境：KEIL MDK-ARM V5.25
 
     硬件环境：
-        1、基于评估板N32WB45xL_EVB开发
+        1、基于评估板N32WB45xL_EVB V1.1开发
         2、MCU：N32WB452
 
 
@@ -16,8 +16,8 @@
     系统配置；
         1、时钟源：HSE+PLL
         2、时钟频率：144MHz
-                3、唤醒源：PA0
-                4、指示灯：PE3
+        3、唤醒源：PA0
+        4、指示灯：PE3
 
 
 
@@ -28,4 +28,31 @@
 
 4、注意事项
     无
+
+
+1. Function description
+    1. Enter and exit SLEEP mode.
+
+2. Use environment
+
+    Software development environment: KEIL MDK-ARM V5.25
+
+    Hardware environment:
+        1. Developed based on the evaluation board N32WB45xL_EVB V1.1
+        2. MCU: N32WB452
+
+3. Instructions for use
+    
+    System Configuration:
+        1. Clock source: HSE+PLL
+        2. Clock frequency: 144MHz
+        3. Wake-up source: PA0
+        4. Indicator light: PE3
+
+     Instructions:
+        After compiling under KEIL and burning to the evaluation board, after power on, the indicator light controlled by PE3 is off. Press the wake-up button PA0 every other time,
+        The level of the indicator light controlled by PE3 will flip once.
+
+4. Matters needing attention
+    None
 

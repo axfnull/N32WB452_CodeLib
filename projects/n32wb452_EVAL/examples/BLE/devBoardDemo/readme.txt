@@ -77,3 +77,81 @@
 4、注意事项
     1、必须连接跳线J17（ADC）、J25/26（三轴加速器）、J22/23/24（温湿度传感器）
     2、必须正确安装LCD（U6）
+
+1. Function description
+	This example is used to demonstrate the Bluetooth OTA upgrade function.
+
+2. Use environment
+	Software development environment	
+		IDE tool：KEIL MDK-ARM 5.26.2.0
+	Hardware environment: 
+		Development board: N32WB45xL_EVB V1.1
+
+3. Instructions for use
+
+	1. Main clock: 144MHz (HSE+PLL)
+    	2. USART1 configuration:
+		TX --> PA9
+            		Baud rate: 115200
+            		Data bits: 8bit
+            		Stop bit: 1bit
+            		no verification
+    	3. Temperature and humidity sensor: HDC2010
+             		Interface: I2C2
+             		SCL: PB10
+             		SDA: PB11
+    	4. Three-axis accelerator: QMA7981
+            		Interface: I2C1
+            		SCL: PB8
+            		SDA: PB9
+    	5. LCD: 1.3inch 240*240 LCD module
+            		Driver chip: ST7789
+            		Interface: SPI2
+            		SPI_CLK: PE11
+            		SPI_MOSI: PE13
+            		RST: PE7
+            		BLK: PE8
+           		DC: PE9
+            		CS: PE10
+    	6. Button:
+            		S3: PA0 (WKUP)
+            		K04: PD8
+            		K05: PD9
+    	7. LED:
+            		D1: PD0 (Bluetooth data sending status indicator)
+            		D10: PD1 (Bluetooth data reception status indicator)
+            		D11: PE2 (Bluetooth connection status indicator)
+            		D12: PE3 (system running status indicator)
+    	7. ADC:
+            		CH1: PB2
+            
+	8. Test steps and phenomena
+        		1. Compile and download the code to the development board, reset, the MCU enters the normal working state, D12 flashes (0.5Hz), D1, D10, D11 are off
+        		2. The LCD is lit, and all data are refreshed regularly:
+           		 Lines 1 and 2 fixedly display the company name and DEMO information
+            		Line 3 shows the bluetooth device name
+            		Line 4 shows the bluetooth working status (connected, disconnected, received data length)
+            		Line 5 displays the first 5 bytes in HEX format after bluetooth received the data
+            		Lines 6, 7, and 8 show the raw data of the three-axis accelerator
+            		Line 9 shows the sampled voltage of the adjustable resistor RP1
+            		Line 10 shows temperature and humidity
+           
+        		3. Open the mobile APP (NS_BlueTooth) to search for Bluetooth broadcast (WB452xxxx)
+        		4. Connect this device, D11 is always on, and the connection status is updated on the LCD
+        		5. After the connection, the loopback test can be performed, D10 flashes when receiving data, and D1 flashes when sending data
+        		6. At the same time, the length of the received data packet and the first 5 bytes of data are displayed on the LCD
+        		7. After connecting, tap K05 to send 10 bytes of data actively
+        		8. After disconnection, D11 goes out
+        
+        		9. Adjust the adjustable resistance, you can see the change of ADC sampling voltage on the LCD
+        		10. With the change of ambient temperature and temperature, the current temperature and humidity value can also be displayed on the LCD in real time
+        
+        		11. When there is no Bluetooth connection, tap K04, the MCU enters the STOP2 sleep mode, all LEDs are off, and the LCD is off
+        		12. In sleep mode, you can still search for Bluetooth broadcast (WB452xxxx) through the mobile APP (NS_BlueTooth)
+        		13. At this time, you can wake up the MCU by connecting a Bluetooth device, or pressing the button S3, return to the normal working state, and cycle the demonstration
+       		14. Some prompt information can be viewed through the serial port
+
+4. Matters needing attention
+
+	1. Jumpers J17 (ADC), J25/26 (three-axis accelerator), J22/23/24 (temperature and humidity sensor) must be connected
+     	2. The LCD (U6) must be installed correctly

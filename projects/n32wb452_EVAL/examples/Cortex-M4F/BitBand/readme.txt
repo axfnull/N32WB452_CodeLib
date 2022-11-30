@@ -22,3 +22,23 @@
 
 
 4、注意事项
+
+1. Function description
+	/* A brief description of the engineering function */
+	This routine configures and demonstrates the bitBand bitband operation
+
+2. Use environment
+	/* Hardware environment: the corresponding development hardware platform */
+	Development board: N32WB45xL_EVB V1.1
+
+3. Instructions for use
+    
+	/* Describe the related module configuration method; For example: clock, I/O, etc. */
+	SystemClock: 144 MHZ
+	USART: TX-PA9, RX-PA10, baud rate 115200
+
+	/* Describes the test steps and symptoms of Demo */
+	1. Reset and run the downloaded program after compilation;
+	2. Set 1 to 0 for different bits of 32-bit data, read the write value and read value, and view the printed information.
+
+4. Matters needing attention

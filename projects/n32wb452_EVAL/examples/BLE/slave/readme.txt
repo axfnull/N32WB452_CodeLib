@@ -36,3 +36,39 @@
 
 4、注意事项
     无
+
+
+1. Function description
+	This example is used to demonstrate the function of the BLE module. Through the mobile phone APP software, it can communicate with the Bluetooth module and send and receive data.
+
+2. Use environment
+	Software development environment	
+		IDE tool：KEIL MDK-ARM 5.26.2.0
+	Hardware environment: 
+		Development board: N32WB45xL_EVB V1.1
+
+3. Instructions for use
+
+	1. Clock source: HSE+PLL
+	2. Main clock: 144MHz
+    	3. USART1 configuration:
+		TX --> PA9	50MHz，AF_PP
+            		Baud rate: 115200
+            		Data bits: 8bit
+            		Stop bit: 1bit
+            		no verification
+
+	4. Test steps and phenomena
+         		1. Compile and download the code to the development board, reset and run, D2 and D3 light up
+         		2. Open the mobile APP (NS_BlueTooth) to search for Bluetooth broadcast, you can see the device "WB452xxxx"
+         		3. Connect the device WB452xxxx. After the connection is successful, D2 flashes. At this time, you can enter the loopback test, set the length of the sent data and the number of times, and start the test.
+         		4. Disconnect or disconnect the device, D2 is always on,
+         		5. After about 10 seconds without connection, the MCU enters the STOP2 sleep mode, and D2 and D3 go out.
+         		6. Under STOP2, wake up regularly through RTC for about 1 second, you can see that D2 is briefly lit once about 1 second
+         		7. In STOP2, you can still search for the device "WB452xxxx" through the mobile phone APP and connect it. After the connection is successful, the MCU wakes up automatically, D2 flashes, and the loopback test can be performed.
+        		8. Disconnect the device, D2 is always on
+         		9. Go back to step 5 and repeat the demonstration
+
+4. Matters needing attention
+
+	None

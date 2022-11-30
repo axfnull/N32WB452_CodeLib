@@ -49,3 +49,53 @@
 4、注意事项
     必须与slave_ota_boot例程配套使用。
     必须连接跳线J1、J30、J21、J32
+
+
+1. Function description
+	This example is used to demonstrate the Bluetooth OTA upgrade function.
+
+2. Use environment
+	Software development environment	
+		IDE tool：KEIL MDK-ARM 5.26.2.0
+	Hardware environment: 
+		Development board: N32WB45xL_EVB V1.1
+
+3. Instructions for use
+
+	1. Clock source: HSE+PLL
+	2. Main clock: 144MHz
+    	3. USART1 configuration:
+		TX --> PA9	50MHz，AF_PP
+            		Baud rate: 115200
+            		Data bits: 8bit
+            		Stop bit: 1bit
+            		no verification
+
+	4. FLASH: W25Q128
+        		Interface: SPI3
+        		SPI_CS PA15
+        		SPI_CLK PB3
+       		SPI_MOSI PB5
+        		SPI_MISO PB4
+
+    	5. Test steps and phenomena
+        		1. Open the serial port tool on the PC
+        		2. First burn the BOOT program (slave_ota_boot example), then compile and download the code to the development board, reset and run
+        		3. On the serial port tool, you can see that the MCU first runs the BOOT program, then jumps to the current APP, initializes the Bluetooth device, and D11 lights up
+        		4. Open the APP "Door Lock OTA_Demo" on the mobile phone, click "Search Device", and you can see the Bluetooth device "WB452_OTA" in the pop-up window
+        		5. Select this device, return to the main interface, click "Select Upgrade File", browse and select the file (*.zip) to be upgraded
+        		6. Click "Start Upgrade", D12 flashes, wait until the upgrade is complete
+        		7. During the upgrade process, the relevant information can be viewed in real time through the serial port tool
+        		8. After the upgrade is completed, it will automatically jump to the BOOT program, return to step 3, and cycle the demonstration
+        
+    	6. How to make an upgrade package
+        		1. __Get_OTA_Info.exe and GetInfo.bat in the project directory are used to generate upgrade file information, and there are upgrade file examples in the ota_file folder
+        		2. Run GetInfo.bat after compiling, and generate *.bin file and __OTA_FW_INTO.txt file in the project directory
+        		3. Unzip the ver_info.json file in the upgrade file example
+        		4. Refer to __OTA_FW_INTO.txt and the bin file name for the relevant information in ver_info.json
+        		5. Compress the modified ver_info.json file and ble_ota.bin together into an upgrade file *.zip
+
+4. Matters needing attention
+
+	Must be used in conjunction with the slave_ota_boot example.
+     	Jumpers J1, J30, J21, J32 must be connected

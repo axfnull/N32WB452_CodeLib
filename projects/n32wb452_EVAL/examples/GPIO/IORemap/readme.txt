@@ -23,3 +23,24 @@
 
 4、注意事项
     JTAG 和 SWD 接口配置成普通 IO 后，需要将 BOOT0 管脚接到 3.3V，通过 BOOT 重新下载
+
+
+1. Function description
+    1. this example shows reading port high and low level, control LED (D1, D10) flashing.
+	2. Control JTAG and SWD interfaces to be configured as common IO interfaces for level reversal.
+	
+2. Use environment
+    Hardware environment: 
+		1.Developed based on the evaluation board N32WB45xL_EVB V1.1
+	
+3. Instructions for use
+    /* Describe the related module configuration method; For example: clock, I/O, etc. */
+	1. SystemClock: 144 MHZ
+	2. GPIO: PA1 is selected as the reading level port, PD0, PD1 control LED(D1, D10) flashing.
+	
+	/* Describes the test steps and symptoms of Demo */
+	1. Reset and run the downloaded program after compilation;
+	2. Connect PA1 to 3.3V ,then you can see D10 on and D1 off. Connect PA0 to GND , D10 is off, D1 is on, and the IO level of PA13, PA14, PA15, PB3, PB4 is flipped with oscilloscope.
+		
+4. Matters needing attention
+    After the JTAG and SWD interfaces are configured as common I/O, connect the BOOT0 pin to 3.3V and download it through BOOT.
